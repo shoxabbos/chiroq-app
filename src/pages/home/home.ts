@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { Flashlight } from '@ionic-native/flashlight';
-import { NativeAudio } from '@ionic-native/native-audio';
 
 @Component({
   selector: 'page-home',
