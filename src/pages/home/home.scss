@@ -2,24 +2,17 @@
 page-home {
     background: #ff6862;
 
-    .toggleButton.on {
-      background-image: url(./assets/imgs/power.png);
-    }
-
-
-    .toggleButton.off {
-        background-image: url(./assets/imgs/power2.png);
-    }
-
-
     .toggleButton {
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
         height: 20%;
         margin: auto;
-        margin-top: 90%;
+        margin-top: 85%;
         cursor: pointer;
+        text-align: center;
+
+        img {
+            max-width: 40%;
+        }
+
     }
 
 

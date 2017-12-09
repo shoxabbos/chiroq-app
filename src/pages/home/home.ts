@@ -9,46 +9,30 @@ import { NativeAudio } from '@ionic-native/native-audio';
 })
 export class HomePage {
 
-  status: any = "on";
+  status: boolean = false;
 
   constructor(
     public navCtrl: NavController, 
     private flashlight: Flashlight,
-    private nativeAudio: NativeAudio,
   ) {
-    this.nativeAudio.preloadSimple('play', './assets/sound/switch.mp3').then(data => {
-      alert(data);
-    }, error => {
-      alert("shoxaerr"+error);
-    });
-  }
-
-
-  play() {
-    this.nativeAudio.play("play").then((res) => {
-        alert("shoxabbos"+res);
-        console.log(res);
-      }, (err) => {
-        alert("shoxabboserr"+err);
-        console.log(err);
-      });
+    
   }
 
   switchOn() {
     this.flashlight.switchOn();
-    this.status = 'off';
+    this.status = false;
   }
 
   switchOff() {
     this.flashlight.switchOff();
-    this.status = 'on';
+    this.status = false;
   }
 
   toggle() {
-    if (this.status == 'on') {
-      this.status = 'off';
+    if (this.status == true) {
+      this.status = false;
     } else {
-      this.status = 'on';
+      this.status = true;
     }
 
     this.flashlight.toggle();

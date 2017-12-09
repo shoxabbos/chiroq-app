@@ -1,3 +1,4 @@
-
-
-<div (click)="toggle()" class="toggleButton {{status}}"></div>
+<div (click)="toggle()" class="toggleButton {{status}}">
+    <img *ngIf="!status" src="assets/imgs/power.png" alt="">
+    <img *ngIf="status" src="assets/imgs/power2.png" alt="">
+</div>
